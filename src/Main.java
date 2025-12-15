@@ -5,15 +5,15 @@ import java.util.SortedSet;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("=== Test Chaine ===");
+        System.out.println("Test du String");
         String texte = "Un tout petit chien, joli \n ronge un joli petit os;\n \nTout ce qui est petit est joli. ";
         executerTest(new SourceChaine(texte));
 
-        System.out.println("\n=== Test Fichier ===");
+        System.out.println("\nTest du fichier");
         try {
             executerTest(new SourceFichier("src/test.txt"));
         } catch (IOException e) {
-            System.err.println("Erreur fichier : " + e.getMessage());
+            System.err.println("Erreur de lecture du fichier : " + e.getMessage());
         }
     }
 
